@@ -1,0 +1,450 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\ymmtr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\ymmtr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\ymmtr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\raphael\raphael.js" charset="UTF-8"></script><script type="text/javascript" src="file:///c:\Users\ymmtr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\flowchart\flowchart.min.js" charset="UTF-8"></script>
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E5%A4%96%E6%A0%AA%E7%94%A8truvalue%E3%83%95%E3%82%A1%E3%82%AF%E3%82%BF%E3%83%BC%E9%96%8B%E7%99%BA">&#x5916;&#x682A;&#x7528;TruValue&#x30D5;&#x30A1;&#x30AF;&#x30BF;&#x30FC;&#x958B;&#x767A;</h1>
+
+<p><a href="https://open.vscode.dev/Naereen/badges"><img src="https://open.vscode.dev/badges/open-in-vscode.svg" alt="Open in Visual Studio Code"></a><br>
+* README.md&#x3092;&#x5FEB;&#x9069;&#x306B;&#x8AAD;&#x3080;&#x305F;&#x3081;&#x306B;&#xFF0C;Visual Studio Code&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x62E1;&#x5F35;&#x6A5F;&#x80FD;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x63A8;&#x5968;&#xFF0E;<br>
+<a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one"><img src="https://yzhang.gallerycdn.vsassets.io/extensions/yzhang/markdown-all-in-one/3.4.0/1605323530575/Microsoft.VisualStudio.Services.Icons.Default" height="60"></a> &#x2003; <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced"><img src="https://cdn.vsassets.io/v/M195_20211109.3/_content/Header/default_icon_128.png" height="60"></a><br>
+**&#x307E;&#x305F;&#x306F;<a href="https://typora.io/">Typola</a>&#x4E0A;&#x3067;&#x3082;&#x5FEB;&#x9069;&#x306B;&#x95B2;&#x89A7;&#x53EF;&#x80FD;&#xFF0E;</p>
+<hr>
+<h2 class="mume-header" id="about">About</h2>
+
+<p><a href="https://insight.factset.com/resources/at-a-glance-truvalue-labs-insight360-datafeed">TruValue&#x30C7;&#x30FC;&#x30BF;</a>&#x3092;&#x7528;&#x3044;&#x3066;<a href="https://www.msci.com/search?keywords=KOKUSAI">KOKUSAI</a>&#x306B;&#x6709;&#x52B9;&#x306A;&#x65B0;&#x30D5;&#x30A1;&#x30AF;&#x30BF;&#x30FC;&#x3092;&#x958B;&#x767A;&#x3059;&#x308B;&#xFF0E;</p>
+<h3 class="mume-header" id="what-is-truvalue">What is TruValue?</h3>
+
+<p>TruValue&#x30B9;&#x30B3;&#x30A2;&#x306F;&#x4F01;&#x696D;&#x306E;ESG&#x884C;&#x52D5;&#x3092;&#x8A55;&#x4FA1;&#x3057;&#x305F;&#x30B9;&#x30B3;&#x30A2;&#x3067;&#x3042;&#x308A;&#xFF0C;4&#x3064;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306B;&#x5206;&#x985E;&#x3055;&#x308C;&#x308B;&#xFF0E;</p>
+<ul>
+<li>Pulse: &#x4F01;&#x696D;&#x306E;&#x77ED;&#x671F;&#x7684;&#x306A;ESG&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x3092;&#x6E2C;&#x5B9A;<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mrow><mi>P</mi><mi>u</mi><mi>l</mi><mi>s</mi><mi>e</mi></mrow><mi>t</mi></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">{Pulse}_t =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">se</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span></span></li>
+<li>Insight: &#x4F01;&#x696D;&#x306E;&#x9577;&#x671F;&#x7684;&#x306A;ESG&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x3092;&#x6E2C;&#x5B9A;<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mrow><mi>I</mi><mi>n</mi><mi>s</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><mi>t</mi></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">{Insight}_t =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.93858em;vertical-align:-0.24414em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.18641599999999994em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span></span></li>
+<li>Momentum: 12&#x304B;&#x6708;&#x306B;&#x6E21;&#x308B;&#x4F01;&#x696D;&#x306E;ESG&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x306E;&#x30C8;&#x30EC;&#x30F3;&#x30C9;<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mrow><mi>M</mi><mi>o</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>u</mi><mi>m</mi></mrow><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">{Momentum}_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">o</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></li>
+<li>Volume: &#x904E;&#x53BB;12&#x304B;&#x6708;&#x9593;&#x306E;&#x4F01;&#x696D;&#x306E;ESG&#x306E;&#x8A18;&#x4E8B;&#x6570;</li>
+</ul>
+<p><img src="https://insight.factset.com/hubfs/Resources%20Section/OpenFactSet%20Partner%20Profiles/Truvalue%20Labs/4%20Insight%20360%20Score.png" alt="tv_4type"></p>
+<h3 class="mume-header" id="materiality">Materiality</h3>
+
+<p>TruValue&#x306E;materiality&#x306F;<a href="https://materiality.sasb.org/materiality.html">SASB&apos;s Materiality Map <sup>&#xAE;</sup></a>&#x306B;&#x6E96;&#x62E0;&#x3057;&#x3066;&#x3044;&#x308B;&#xFF0E;</p>
+<ul>
+<li>Environment
+<ul>
+<li>GHG Emissions (GHG&#x6392;&#x51FA;&#x91CF;)</li>
+<li>Air Quality (&#x5927;&#x6C17;&#x8CEA;)</li>
+<li>Energy Management (&#x30A8;&#x30CD;&#x30EB;&#x30AE;&#x30FC;&#x7BA1;&#x7406;)</li>
+<li>Water &amp; Wastewater Management (&#x6C34;&#x53CA;&#x3073;&#x6392;&#x6C34;&#x7BA1;&#x7406;)</li>
+<li>Waste &amp; Hazardous Materials Management (&#x5EC3;&#x68C4;&#x7269;&#x53CA;&#x3073;&#x6709;&#x5BB3;&#x7269;&#x8CEA;&#x7BA1;&#x7406;)</li>
+<li>Ecological Impacts (&#x751F;&#x4F53;&#x591A;&#x69D8;&#x6027;&#x5F71;&#x97FF;)</li>
+</ul>
+</li>
+<li>Social Capital
+<ul>
+<li>Human Rights &amp; Community Relations (&#x4EBA;&#x6A29;&#x53CA;&#x3073;&#x5730;&#x57DF;&#x793E;&#x4F1A;&#x3068;&#x306E;&#x95A2;&#x4FC2;)</li>
+<li>Customer Privacy (&#x304A;&#x5BA2;&#x69D8;&#x306E;&#x30D7;&#x30E9;&#x30A4;&#x30D0;&#x30B7;&#x30FC;)</li>
+<li>Data Security (&#x30C7;&#x30FC;&#x30BF;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;)</li>
+<li>Access &amp; Affordability (&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x304A;&#x3088;&#x3073;&#x624B;&#x9803;&#x306A;&#x4FA1;&#x683C;)</li>
+<li>Product Quality &amp; Safety (&#x88FD;&#x54C1;&#x54C1;&#x8CEA;&#x30FB;&#x88FD;&#x54C1;&#x5B89;&#x5168;)</li>
+<li>Customer Welfare (&#x6D88;&#x8CBB;&#x8005;&#x306E;&#x798F;&#x5229;)</li>
+<li>Selling Practices &amp; Product Labeling (&#x8CA9;&#x58F2;&#x6163;&#x884C;&#x30FB;&#x88FD;&#x54C1;&#x8868;&#x793A;)</li>
+</ul>
+</li>
+<li>Human Capital
+<ul>
+<li>Labor Practices (&#x52B4;&#x50CD;&#x6163;&#x884C;)</li>
+<li>Employee Health &amp; Safety (&#x5F93;&#x696D;&#x54E1;&#x306E;&#x5B89;&#x5168;&#x6027;)</li>
+<li>Employee Engagement, Diversity &amp; Inclusion (&#x5F93;&#x696D;&#x54E1;&#x53C2;&#x753B;&#x30FB;&#x30C0;&#x30A4;&#x30D0;&#x30FC;&#x30B7;&#x30C6;&#x30A3;&#x3068;&#x5305;&#x6442;&#x6027;)</li>
+</ul>
+</li>
+<li>Business Model &amp; Innovation
+<ul>
+<li>Product Design &amp; Lifecycle Management (&#x88FD;&#x54C1;&#x53CA;&#x3073;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x30E9;&#x30A4;&#x30D5;&#x30B5;&#x30A4;&#x30AF;&#x30EB;&#x3078;&#x306E;&#x5F71;&#x97FF;)</li>
+<li>Business Model Resilience (&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x5F37;&#x976D;&#x6027;)</li>
+<li>Supply Chain Management (&#x30B5;&#x30D7;&#x30E9;&#x30A4;&#x30C1;&#x30A7;&#x30FC;&#x30F3;&#x30DE;&#x30CD;&#x30B8;&#x30E1;&#x30F3;&#x30C8;)</li>
+<li>Materials Sourcing &amp; Efficiency (&#x6750;&#x6599;&#x8ABF;&#x9054;&#x53CA;&#x3073;&#x8CC7;&#x6E90;&#x52B9;&#x7387;&#x6027;)</li>
+<li>Physical Impacts of Climate Change (&#x6C17;&#x5019;&#x5909;&#x52D5;&#x306E;&#x7269;&#x7406;&#x7684;&#x5F71;&#x97FF;)</li>
+</ul>
+</li>
+<li>Leadership &amp; Governance
+<ul>
+<li>Business Ethics (&#x4E8B;&#x696D;&#x502B;&#x7406;)</li>
+<li>Competitive Behavior (&#x7AF6;&#x4E89;&#x7684;&#x884C;&#x70BA;)</li>
+<li>Management of the Legal &amp; Regulatory Environment (&#x898F;&#x5236;&#x306E;&#x628A;&#x63E1;&#x3068;&#x653F;&#x6CBB;&#x7684;&#x5F71;&#x97FF;)</li>
+<li>Critical Incident Risk Management (&#x91CD;&#x5927;&#x30A4;&#x30F3;&#x30B7;&#x30C7;&#x30F3;&#x30C8;&#x30EA;&#x30B9;&#x30AF;&#x7BA1;&#x7406;)</li>
+<li>Systemic Risk Management (&#x30B7;&#x30B9;&#x30C6;&#x30DF;&#x30C3;&#x30AF;&#x30EA;&#x30B9;&#x30AF;&#x7BA1;&#x7406;)</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="where-is-the-dataset-is-stored">Where is the dataset is stored?</h3>
+
+<ul>
+<li>&#x683C;&#x7D0D;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;: <code>./input/tv_score_for_kokusai</code></li>
+<li>&#x30C7;&#x30FC;&#x30BF;&#x66F4;&#x65B0;&#x65B9;&#x6CD5;: &#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x53E9;&#x304F;<pre data-role="codeBlock" data-info="bash" class="language-bash">python ./src/load.py
+</pre></li>
+</ul>
+<hr>
+<h2 class="mume-header" id="plan">Plan</h2>
+
+<h3 class="mume-header" id="flow">Flow</h3>
+
+<p>&#x958B;&#x767A;&#x30D5;&#x30ED;&#x30FC;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8003;&#x3048;&#x3066;&#x3044;&#x308B;&#xFF0E;</p>
+<div class="flow">st=&gt;start:&gt;http://www.google.com[blank]
+e=&gt;end:&gt;http://www.google.com
+op1=&gt;operation: Basic analysis of all-catecory-score for each TruValue type
+op2=&gt;operation: Identify the kye points for alpha.
+para=&gt;parallel: Select the importance to key
+
+st(right)-&gt;op1
+op1-&gt;op2
+op2-&gt;para(path1, top)
+</div><h3 class="mume-header" id="schedule">Schedule</h3>
+
+<p>&#x958B;&#x767A;&#x65E5;&#x7A0B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8003;&#x3048;&#x3066;&#x3044;&#x308B;&#xFF0E;</p>
+<div class="mermaid">gantt
+    title Create a new factor for KOKUSAI
+    dateFormat YYYY-MM-DD
+    section Basic &lt;br/&gt; Analysis of &lt;br/&gt; all-category &lt;br/&gt; -score
+    Optimize dev. env.:done,  a1, 2021-11-01, 3d
+    Calcultate statistics:done, a2, after a1, 11d
+    Calculate IC, Q1uantile, Turnover, Coverage:done, a3, after a1, 11d
+    Calculate region specific:done, a4, after a1, 11d
+    Calculate sector specific:done, a5, after a1, 11d
+    Summarize :a6, after a2, 3d
+
+    section Basic &lt;br/&gt; Analysis for  &lt;br/&gt; each &lt;br/&gt; materiality
+    Calcultate statistics: b1, after a6, 21d
+    Calculate IC, Q1, ...: b2, after a6, 21d
+    Calculate region specific: b3, after a6, 21d
+    Calculate sector specific: b4, after a6, 21d
+
+    section Development of factors
+    Idntify key points: c1, after a6, 3d  
+    Make strategies: c2, after c1, 28d
+    Create factors: c3, after c1, 28d
+
+    section Evaluation of factors
+    Evaluation (IC, Quantile): d1, after c1, 28d
+    Submition: : d2, after d1, 0d  
+</div><hr>
+<h2 class="mume-header" id="what-is-important-to-create-factors">What is important to create factors?</h2>
+
+
+      </div>
+      
+      
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "default"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    <script>
+var flowcharts = document.getElementsByClassName('flow')
+for (var i = 0; i < flowcharts.length; i++) {
+  var flow = flowcharts[i]
+  try {
+    var diagram = flowchart.parse(flow.textContent)
+    flow.id = 'flow_' + i
+    flow.innerHTML = ''
+    diagram.drawSVG(flow.id)
+  } catch (error) {
+    flow.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+  }
+}
+</script>
+    
+    
+  
+    </body></html>
